@@ -1,0 +1,137 @@
+/* 기본 초기화 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+/* 날씨 카드 디자인 */
+.weather-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 30px;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    word-break: keep-all;
+}
+
+header p {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+/* 메인 온도 및 날씨 상태 */
+.main-weather {
+    margin-bottom: 40px;
+}
+
+.temperature {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: #2980b9;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.celsius {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.weather-status {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #34495e;
+    margin-top: 15px;
+}
+
+/* 하단 세부 정보 (습도, 풍속, 강수량) */
+.weather-details {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ecf0f1;
+    padding-top: 25px;
+    margin-bottom: 30px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.detail-item .label {
+    font-size: 0.8rem;
+    color: #95a5a6;
+    margin-bottom: 8px;
+}
+
+.detail-item .value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* 새로고침 버튼 스타일 */
+.refresh-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.refresh-button:hover {
+    background-color: #2980b9;
+}
+
+.refresh-button:active {
+    transform: scale(0.98);
+}
+
+/* 에러 메시지 */
+.error {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 20px;
+    padding: 10px;
+    background: #fadbd8;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none;
+}
