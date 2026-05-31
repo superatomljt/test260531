@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실시간 날씨 정보</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-card">
+        <header>
+            <h1>📍 부산광역시 부산진구 부전동</h1>
+            <p id="time-display">날씨 정보를 불러오는 중...</p>
+        </header>
+        
+        <div class="main-weather">
+            <div class="temperature">
+                <span id="temp">--</span><span class="celsius">°C</span>
+            </div>
+            <div class="weather-status" id="status">상태 조회 중</div>
+        </div>
+
+        <div class="weather-details">
+            <div class="detail-item">
+                <span class="label">습도</span>
+                <span class="value" id="humidity">--%</span>
+            </div>
+            <div class="detail-item">
+                <span class="label">풍속</span>
+                <span class="value" id="wind">-- m/s</span>
+            </div>
+            <div class="detail-item">
+                <span class="label">1시간 강수량</span>
+                <span class="value" id="rain">-- mm</span>
+            </div>
+        </div>
+
+        <button id="refresh-btn" class="refresh-button">🔄 실시간 새로고침</button>
+
+        <div id="error-message" class="error hidden"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
